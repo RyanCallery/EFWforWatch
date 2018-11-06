@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14313.18" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14238.10"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="EFWforWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="Weeks" textAlignment="center" id="Fjl-6X-EIz">
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="22"/>
+                        </label>
+                        <separator alignment="left" id="PU0-Zq-9d5">
+                            <color key="color" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </separator>
+                        <table alignment="left" id="Ycv-A4-prN">
+                            <items>
+                                <tableRow identifier="Row" id="WYe-mJ-qOg" customClass="WeekSelectRow" customModule="EFWforWatch_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="CS4-o5-dX8">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="Label" id="p6K-6y-6tB">
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="font" type="system" weight="medium" pointSize="18"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="weeksLabel" destination="p6K-6y-6tB" id="l5y-JB-KYH"/>
+                                        <segue destination="O0e-K6-ow0" kind="push" id="NyZ-XC-6Yu"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="weekTable" destination="Ycv-A4-prN" id="Xqv-io-I78"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="20" y="31"/>
+        </scene>
+        <!--Weights-->
+        <scene sceneID="Ua3-uP-ciR">
+            <objects>
+                <controller identifier="Weights" id="O0e-K6-ow0" customClass="WeightsInterfaceController" customModule="EFWforWatch_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="gWm-7b-QDn">
+                            <items>
+                                <label width="0.59999999999999998" height="1" alignment="left" text="Label" numberOfLines="0" id="Xqm-Au-YtQ">
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="24"/>
+                                </label>
+                                <button width="0.29999999999999999" alignment="right" id="14F-Jg-Tdf">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <action selector="convertUnits" destination="O0e-K6-ow0" id="u8G-Cj-7IK"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="ZNO-mk-ddo">
+                            <color key="color" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </separator>
+                        <group width="1" height="0.69999999999999996" alignment="left" layout="vertical" id="6Fw-BB-CIp">
+                            <items>
+                                <group width="1" height="0.33000000000000002" alignment="left" id="5aq-W0-fVw">
+                                    <items>
+                                        <label width="0.29999999999999999" alignment="left" text="10th" numberOfLines="0" id="Ot2-ET-KWr">
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </label>
+                                        <label width="0.69999999999999996" alignment="left" text="Label" textAlignment="center" numberOfLines="0" id="RFI-tb-PcF">
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="font" type="system" pointSize="16"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" height="0.33000000000000002" alignment="left" id="581-HQ-XCI">
+                                    <items>
+                                        <label width="0.29999999999999999" alignment="left" text="50th" numberOfLines="0" id="eFM-zq-zKO">
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </label>
+                                        <label width="0.69999999999999996" alignment="left" text="Label" textAlignment="center" numberOfLines="0" id="uYB-Ii-Tyg">
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" height="0.33000000000000002" alignment="left" id="h2t-la-11t">
+                                    <items>
+                                        <label width="0.29999999999999999" alignment="left" text="90th" numberOfLines="0" id="max-pt-rPe">
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </label>
+                                        <label width="0.69999999999999996" alignment="left" text="Label" textAlignment="center" numberOfLines="0" id="fgU-Xh-USz">
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="fiftiethWt" destination="uYB-Ii-Tyg" id="QII-mb-OIP"/>
+                        <outlet property="nintiethWt" destination="fgU-Xh-USz" id="YsA-SJ-DoU"/>
+                        <outlet property="tenthWt" destination="RFI-tb-PcF" id="Iqs-gX-DWy"/>
+                        <outlet property="unitsButton" destination="14F-Jg-Tdf" id="dKE-Q9-Uxy"/>
+                        <outlet property="weeksLabel" destination="Xqm-Au-YtQ" id="szj-IN-tug"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="336" y="31"/>
+        </scene>
+    </scenes>
+</document>
